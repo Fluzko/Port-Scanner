@@ -22,11 +22,18 @@ if len(sys.argv) == 2:
     if sys.argv[1] in ['-help', '--help', '-h', '--h']:
         helpScreen()
         sys.exit()
-    target = socket.gethostbyname(sys.argv[1])
-
+    try:
+        target = socket.gethostbyname(sys.argv[1])
+    except:
+        print('Ip error')
+        sys.exit()
 
 if len(sys.argv) > 2:
-    target = socket.gethostbyname(sys.argv[1])
+    try:
+        target = socket.gethostbyname(sys.argv[1])
+    except:
+        print('Ip error')
+        sys.exit()
     if len(sys.argv) == 4 and sys.argv[2] in ['-i', '-f']:
         if sys.argv[2] == '-i':
             try:
