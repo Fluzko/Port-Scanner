@@ -11,9 +11,14 @@ Run the command below on your console
 ```bash
 python3 scanner.py <ip-address>
 ```
+
+for help run this command:
+```bash
+python3 scanner.py -h
+```
 eg:
 ```bash
-python3 scanner.py 192.168.0.1
+python3 scanner.py 192.168.0. -i 1 -f 65535
 ```
 
 ## Contributing
@@ -25,4 +30,5 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Changelog
+- Now you can specify the limits of the ports and added '-help' command
 - Runs on all the ports from 1-65000, takes some time...
